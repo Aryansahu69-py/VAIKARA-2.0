@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Vaikara</title>
+
+    <!-- Keep your existing website theme -->
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/Vaikara.png">
+</head>
+
+<body>
+    <!-- Corner Logo -->
+    <div class="corner-logo">
+        <a href="index.html">
+            <img src="assets/images/Vaikara.png" alt="Vaikara">
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="shop-navbar">
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <img src="assets/icons/shop2.svg" alt="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="shop.html" class="active">
+                    <img src="assets/icons/shop.svg" alt="Shop">
+                    <span>Shop</span>
+                </a>
+            </li>
+            <li>
+                <a href="assets/documents/project1.pdf" target="_blank">
+                    <img src="assets/icons/discover.svg" alt="Discover">
+                    <span>Discover</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="openCart(); return false;">
+                    <span class="cart-nav-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <b id="cartCount">0</b>
+                    </span>
+                    <span>Cart</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="assets/icons/Profile.svg" alt="Profile">
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Shop Hero -->
+        <section class="shop-hero">
+            <div class="hero-copy">
+                <span class="eyebrow">VAIKARA • SEA BUCKTHORN</span>
+                <h1>Nature's goodness,<br><em>made for you.</em></h1>
+                <p>
+                    Explore Vaikara's plant-based collection of refreshing drinks
+                    and wholesome sea buckthorn treats.
+                </p>
+                <a href="#products" class="shop-cta">Explore Collection <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+
+            <div class="hero-product">
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+                <img src="assets/images/zivara.jpg" alt="Vaikara Zivara Sea Buckthorn Juice">
+                <div class="hero-label">
+                    <span>Featured</span>
+                    <strong>Zivara</strong>
+                    <small>Sea Buckthorn Juice</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category controls -->
+        <section class="shop-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">OUR COLLECTION</span>
+                    <h2>Shop Vaikara</h2>
+                </div>
+                <p>Simple, natural products inspired by one precious berry.</p>
+            </div>
+
+            <div class="shop-toolbar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="drinks">Drinks</button>
+                    <button class="filter-btn" data-filter="candies">Candies</button>
+                </div>
+
+                <button class="sort-button" id="sortButton">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                    Sort by price
+                </button>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <article class="product-card" data-category="drinks" data-price="70" data-name="Zivara">
+                    <div class="product-image">
+                        <span class="product-badge">BESTSELLER</span>
+                        <img src="assets/images/zivara.jpg" alt="Zivara Sea Buckthorn Juice">
+                        <button class="quick-view"
+                            onclick="showProduct('Zivara', 'Sea Buckthorn Juice Drink', 70, 'shop-assets/zivara.jpg')">
+                            Quick view
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">DRINKS</div>
+                        <h3>Zivara</h3>
+                        <p>Sea Buckthorn Juice Drink</p>
+                        <div class="product-bottom">
+                            <strong>₹70</strong>
+                            <button class="add-btn" onclick="addToCart('Zivara', 70, 'shop-assets/zivara.jpg')">
+                                Add to cart <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="drinks" data-price="40" data-name="CZing">
+                    <div class="product-image">
+                        <span class="product-badge warm">ENERGY</span>
+                        <img src="assets/images/czing.jpg" alt="CZing Sea Buckthorn Energy Drink">
+                        <button class="quick-view"
+                            onclick="showProduct('CZing', 'Sea Buckthorn Energy Drink', 40, 'assets/images/czing.jpg')">
+                            Quick view
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">DRINKS</div>
+                        <h3>CZing</h3>
+                        <p>Sea Buckthorn Energy Drink</p>
+                        <div class="product-bottom">
+                            <strong>₹40</strong>
+                            <button class="add-btn" onclick="addToCart('CZing', 299, 'shop-assets/czing.jpg')">
+                                Add to cart <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="candies" data-price="60" data-name="Buck-Pop">
+                    <div class="product-image">
+                        <span class="product-badge">POPULAR</span>
+                        <img src="assets/images/buck-pop.jpg" alt="Buck-Pop Sea Buckthorn Candy">
+                        <button class="quick-view"
+                            onclick="showProduct('Buck-Pop', 'Sea Buckthorn Candy', 60, 'assets/images/buck-pop.jpg')">
+                            Quick view
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">CANDIES</div>
+                        <h3>Buck-Pop</h3>
+                        <p>Sea Buckthorn Candy — 120 candies</p>
+                        <div class="product-bottom">
+                            <strong>₹60</strong>
+                            <button class="add-btn" onclick="addToCart('Buck-Pop', 60, 'shop-assets/buck-pop.jpg')">
+                                Add to cart <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="candies" data-price="50" data-name="Vital Berry">
+                    <div class="product-image">
+                        <span class="product-badge">NEW</span>
+                        <img src="assets/images/vital-berry.jpg" alt="Vital Berry Sea Buckthorn Gummies">
+                        <button class="quick-view"
+                            onclick="showProduct('Vital Berry', 'Sea Buckthorn Gummies', 50, 'assets/images/vital-berry.jpg')">
+                            Quick view
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">CANDIES</div>
+                        <h3>Vital Berry</h3>
+                        <p>Sea Buckthorn Gummies — 120 gummies</p>
+                        <div class="product-bottom">
+                            <strong>₹50</strong>
+                            <button class="add-btn"
+                                onclick="addToCart('Vital Berry', 50, 'shop-assets/vital-berry.jpg')">
+                                Add to cart <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Brand promise -->
+        <section class="shop-promise">
+            <div class="promise-card">
+                <span><i class="fa-solid fa-leaf"></i></span>
+                <h3>Plant-based</h3>
+                <p>Inspired by nature and the goodness of sea buckthorn.</p>
+            </div>
+            <div class="promise-card">
+                <span><i class="fa-solid fa-heart"></i></span>
+                <h3>Made with care</h3>
+                <p>Products designed around everyday wellness and enjoyment.</p>
+            </div>
+            <div class="promise-card">
+                <span><i class="fa-solid fa-box-open"></i></span>
+                <h3>Easy shopping</h3>
+                <p>Browse, add to cart and keep your favourites together.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-overlay" onclick="closeCart()"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <div>
+                    <span class="eyebrow">YOUR BAG</span>
+                    <h2>Your Cart</h2>
+                </div>
+                <button class="close-cart" onclick="closeCart()" aria-label="Close cart">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="cartItems" class="cart-items">
+                <div class="empty-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Add something from the collection to get started.</p>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">₹0</strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">
+                    Proceed to checkout <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-backdrop" onclick="closeProduct()"></div>
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeProduct()"><i class="fa-solid fa-xmark"></i></button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-content">
+                <span class="eyebrow">VAIKARA PRODUCT</span>
+                <h2 id="modalName"></h2>
+                <p id="modalDescription"></p>
+                <strong id="modalPrice"></strong>
+                <button class="checkout-btn" id="modalAdd">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Vaikara. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const cart = [];
+
+        function updateCart() {
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+            document.getElementById("cartCount").textContent = count;
+            document.getElementById("cartTotal").textContent = "₹" + total.toLocaleString("en-IN");
+
+            const container = document.getElementById("cartItems");
+
+            if (!cart.length) {
+                container.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Add something from the collection to get started.</p>
+                    </div>`;
+                return;
+            }
+
+            container.innerHTML = cart.map((item, index) => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <span>₹${item.price.toLocaleString("en-IN")}</span>
+                        <div class="quantity">
+                            <button onclick="changeQuantity(${index}, -1)">−</button>
+                            <b>${item.quantity}</b>
+                            <button onclick="changeQuantity(${index}, 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${index})">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            `).join("");
+        }
+
+        function addToCart(name, price, image) {
+            const existing = cart.find(item => item.name === name);
+
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+
+            updateCart();
+            openCart();
+        }
+
+        function changeQuantity(index, amount) {
+            cart[index].quantity += amount;
+            if (cart[index].quantity <= 0) cart.splice(index, 1);
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function openCart() {
+            document.getElementById("cartDrawer").classList.add("open");
+            document.getElementById("cartDrawer").setAttribute("aria-hidden", "false");
+            document.body.classList.add("no-scroll");
+        }
+
+        function closeCart() {
+            document.getElementById("cartDrawer").classList.remove("open");
+            document.getElementById("cartDrawer").setAttribute("aria-hidden", "true");
+            document.body.classList.remove("no-scroll");
+        }
+
+        function showProduct(name, description, price, image) {
+            document.getElementById("modalName").textContent = name;
+            document.getElementById("modalDescription").textContent = description;
+            document.getElementById("modalPrice").textContent = "₹" + price.toLocaleString("en-IN");
+            document.getElementById("modalImage").src = image;
+
+            document.getElementById("modalAdd").onclick = () => {
+                addToCart(name, price, image);
+                closeProduct();
+            };
+
+            document.getElementById("productModal").classList.add("open");
+            document.body.classList.add("no-scroll");
+        }
+
+        function closeProduct() {
+            document.getElementById("productModal").classList.remove("open");
+            document.body.classList.remove("no-scroll");
+        }
+
+        function checkout() {
+            if (!cart.length) {
+                alert("Your cart is empty.");
+                return;
+            }
+            alert("Checkout is ready to be connected to your payment/order system.");
+        }
+
+        // Category filtering
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const filter = button.dataset.filter;
+                document.querySelectorAll(".product-card").forEach(card => {
+                    card.style.display =
+                        filter === "all" || card.dataset.category === filter ? "" : "none";
+                });
+            });
+        });
+
+        // Toggle ascending / descending price
+        let ascending = true;
+        document.getElementById("sortButton").addEventListener("click", () => {
+            const grid = document.getElementById("productGrid");
+            const cards = [...grid.querySelectorAll(".product-card")];
+
+            cards.sort((a, b) => {
+                const diff = Number(a.dataset.price) - Number(b.dataset.price);
+                return ascending ? diff : -diff;
+            });
+
+            cards.forEach(card => grid.appendChild(card));
+            ascending = !ascending;
+            document.getElementById("sortButton").innerHTML =
+                `<i class="fa-solid fa-arrow-down-wide-short"></i> Sort: ${ascending ? "low to high" : "high to low"}`;
+        });
+
+        updateCart();
+    </script>
+</body>
+
+</html>

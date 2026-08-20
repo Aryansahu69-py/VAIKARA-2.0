@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-/* VAIKARA - PREMIUM MINIMALIST DESIGN */
+
 
 :root {
     /* Color Palette */
@@ -39,9 +39,7 @@ h1, h2, h3, h4 {
     color: var(--clr-dark);
 }
 
-/* =========================================
-   NAVIGATION BAR
-   ========================================= */
+
 .navbar {
     position: absolute;
     top: 20px;
@@ -95,9 +93,7 @@ h1, h2, h3, h4 {
     transform: scale(1.1);
 }
 
-/* =========================================
-   CORNER LOGO
-   ========================================= */
+
 .corner-logo {
     position: fixed;
     top: 30px;
@@ -115,9 +111,7 @@ h1, h2, h3, h4 {
     transform: rotate(5deg) scale(1.05);
 }
 
-/* =========================================
-   HERO SECTION
-   ========================================= */
+
 header {
     position: relative;
     z-index: 1;
@@ -200,9 +194,7 @@ header::before {
     margin-bottom: 40px;
 }
 
-/* =========================================
-   STATS
-   ========================================= */
+
 .stats {
     display: flex;
     justify-content: center;
@@ -262,9 +254,7 @@ header::before {
     margin: 0;
 }
 
-/* =========================================
-   GENERAL SECTIONS & HEADINGS
-   ========================================= */
+
 section {
     max-width: 1200px;
     margin: 0 auto;
@@ -300,9 +290,7 @@ h2::after {
     color: var(--clr-text-muted);
 }
 
-/* =========================================
-   FEATURED COLLECTIONS
-   ========================================= */
+
 .skills-background {
     position: relative;
     background: var(--clr-primary);
@@ -384,9 +372,7 @@ h2::after {
     color: var(--clr-primary);
 }
 
-/* =========================================
-   CONTACT & SOCIALS
-   ========================================= */
+
 #contact {
     padding: 80px 20px;
 }
@@ -423,9 +409,7 @@ h2::after {
     box-shadow: var(--shadow-hover);
 }
 
-/* =========================================
-   TESTIMONIALS
-   ========================================= */
+
 #testimonials {
     background: var(--clr-surface);
 }
@@ -471,9 +455,7 @@ h2::after {
     font-size: 1.05rem;
 }
 
-/* =========================================
-   FAQ
-   ========================================= */
+
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
@@ -538,9 +520,6 @@ h2::after {
     font-size: 0.98rem;
 }
 
-/* =========================================
-   NEWSLETTER
-   ========================================= */
 .newsletter-section {
     padding-bottom: 0;
 }
@@ -610,9 +589,7 @@ h2::after {
     box-shadow: 0 10px 20px rgba(210, 125, 45, 0.3);
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+
 footer {
     background: var(--clr-dark);
     color: rgba(255, 255, 255, 0.6);
@@ -622,9 +599,6 @@ footer {
     letter-spacing: 1.5px;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN (MOBILE OPTIMIZATIONS)
-   ========================================= */
 @media (max-width: 992px) {
     .navbar {
         width: 90%;
@@ -634,7 +608,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Corner Logo Mobile Positioning */
+   
     .corner-logo {
         position: absolute;
         top: 20px;
@@ -652,7 +626,7 @@ footer {
         transform: none;
     }
 
-    /* Fixed App-Style Bottom Navigation */
+   
     .navbar {
         position: fixed;
         bottom: 15px;
@@ -687,7 +661,7 @@ footer {
         height: 20px;
     }
     
-    /* Layout & Section Adjustments */
+   
     section {
         padding: 60px 15px;
     }

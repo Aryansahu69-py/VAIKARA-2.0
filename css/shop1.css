@@ -1,10 +1,4 @@
-/* =========================================================
-   VAIKARA SHOP PAGE - FULLY OPTIMIZED & RESPONSIVE STYLESHEET
-   Supports Desktop, Tablet, & Mobile Touch Devices.
-   Works with the existing style2.css theme.
-   ========================================================= */
 
-/* --- ROOT & GLOBAL OVERRIDES --- */
 :root {
     --nav-height-desktop: 70px;
     --nav-height-mobile: 65px;
@@ -20,15 +14,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Prevent scrolling when drawer or modal is active */
+
 body.no-scroll {
     overflow: hidden;
     touch-action: none;
 }
 
-/* =========================================================
-   NAVIGATION BAR
-   ========================================================= */
+
 .shop-navbar {
     position: fixed;
     top: 20px;
@@ -107,9 +99,6 @@ body.no-scroll {
     box-shadow: 0 2px 6px rgba(210, 125, 45, 0.4);
 }
 
-/* =========================================================
-   SHOP HERO SECTION
-   ========================================================= */
 .shop-hero {
     min-height: 720px;
     max-width: 1400px;
@@ -277,9 +266,7 @@ body.no-scroll {
     font-size: 0.8rem;
 }
 
-/* =========================================================
-   MAIN PRODUCTS SECTION
-   ========================================================= */
+
 .shop-section {
     max-width: 1250px;
     margin: 0 auto;
@@ -314,7 +301,7 @@ body.no-scroll {
     font-size: 1.05rem;
 }
 
-/* Toolbar & Filters */
+
 .shop-toolbar {
     display: flex;
     justify-content: space-between;
@@ -364,9 +351,7 @@ body.no-scroll {
     white-space: nowrap;
 }
 
-/* =========================================================
-   PRODUCT GRID & CARDS
-   ========================================================= */
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -525,9 +510,6 @@ body.no-scroll {
     transform: translateY(-2px);
 }
 
-/* =========================================================
-   BRAND PROMISE SECTION
-   ========================================================= */
 .shop-promise {
     max-width: 1200px;
     margin: 0 auto 100px;
@@ -570,9 +552,7 @@ body.no-scroll {
     margin: 0;
 }
 
-/* =========================================================
-   CART DRAWER
-   ========================================================= */
+
 .cart-drawer {
     position: fixed;
     inset: 0;
@@ -825,9 +805,7 @@ body.no-scroll {
     box-shadow: var(--shadow-hover);
 }
 
-/* =========================================================
-   QUICK VIEW MODAL
-   ========================================================= */
+
 .modal {
     position: fixed;
     inset: 0;

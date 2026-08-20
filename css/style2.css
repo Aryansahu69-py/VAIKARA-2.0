@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-/* VAIKARA - PREMIUM MINIMALIST DESIGN */
+
 
 :root {
-    /* Color Palette */
+   
     --clr-bg: #FAF9F6; /* Soft Linen */
     --clr-surface: #FFFFFF;
     --clr-dark: #1A1E1A; /* Deep Earthy Black */
@@ -12,7 +12,7 @@
     --clr-text-main: #2C302B;
     --clr-text-muted: #6A7368;
     
-    /* Shadows & Transitions */
+
     --shadow-soft: 0 12px 40px rgba(59, 77, 54, 0.08);
     --shadow-hover: 0 20px 50px rgba(210, 125, 45, 0.15);
     --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -39,9 +39,7 @@ h1, h2, h3, h4 {
     color: var(--clr-dark);
 }
 
-/* =========================================
-   NAVIGATION BAR
-   ========================================= */
+
 .navbar {
     position: absolute;
     top: 20px;
@@ -89,7 +87,6 @@ h1, h2, h3, h4 {
     transition: var(--transition-smooth);
 }
 
-/* Simple Hover Effect */
 .nav-links a:hover {
     opacity: 0.7;
 }
@@ -99,9 +96,7 @@ h1, h2, h3, h4 {
     transform: scale(1.1);
 }
 
-/* =========================================
-   CORNER LOGO
-   ========================================= */
+
 .corner-logo {
     position: fixed;
     top: 30px;
@@ -118,12 +113,10 @@ h1, h2, h3, h4 {
     transform: rotate(5deg) scale(1.05);
 }
 
-/* =========================================
-   HERO SECTION
-   ========================================= */
+
 header {
     position: relative;
-    z-index: 1; /* Creates stacking context so video doesn't hide behind body background */
+    z-index: 1; 
     min-height: 100vh;
     overflow: hidden;
 }
@@ -145,10 +138,9 @@ header {
     height: 100%;
     object-fit: cover;
     z-index: -2;
-    opacity: 1; /* Make video fully visible */
+    opacity: 1; 
 }
 
-/* Gradient overlay for hero */
 header::before {
     content: '';
     position: absolute;
@@ -203,9 +195,7 @@ header::before {
     margin-bottom: 60px;
 }
 
-/* =========================================
-   STATS
-   ========================================= */
+
 .stats {
     display: flex;
     justify-content: center;
@@ -226,7 +216,7 @@ header::before {
     overflow: hidden;
 }
 
-/* Accent line on hover */
+
 .stats div::before {
     content: '';
     position: absolute;
@@ -264,9 +254,7 @@ header::before {
     margin: 0;
 }
 
-/* =========================================
-   GENERAL SECTIONS
-   ========================================= */
+
 section {
     max-width: 1200px;
     margin: 0 auto;
@@ -283,7 +271,7 @@ h2 {
     transform: translateX(-50%);
 }
 
-/* Decorative dot under headings */
+
 h2::after {
     content: '';
     position: absolute;
@@ -305,9 +293,7 @@ h2::after {
     color: var(--clr-text-muted);
 }
 
-/* =========================================
-   FEATURED COLLECTIONS (Cards)
-   ========================================= */
+
 .skills-background {
     position: relative;
     background: var(--clr-primary);
@@ -389,9 +375,7 @@ h2::after {
     color: var(--clr-primary);
 }
 
-/* =========================================
-   CONTACT & SOCIALS
-   ========================================= */
+
 #contact {
     padding: 100px 20px;
 }
@@ -432,9 +416,6 @@ h2::after {
     transform: scale(1.1);
 }
 
-/* =========================================
-   TESTIMONIALS
-   ========================================= */
 #testimonials {
     background: var(--clr-surface);
 }
@@ -481,9 +462,7 @@ h2::after {
     font-size: 1.1rem;
 }
 
-/* =========================================
-   FAQ
-   ========================================= */
+
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
@@ -541,9 +520,6 @@ h2::after {
     color: var(--clr-text-muted);
 }
 
-/* =========================================
-   NEWSLETTER
-   ========================================= */
 .newsletter-section {
     padding-bottom: 0;
 }
@@ -612,9 +588,7 @@ h2::after {
     box-shadow: 0 10px 20px rgba(210, 125, 45, 0.3);
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+
 footer {
     background: var(--clr-dark);
     color: rgba(255, 255, 255, 0.6);
